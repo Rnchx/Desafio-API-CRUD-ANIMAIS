@@ -8,15 +8,19 @@ class Animais {
     }
 
     counterAnimais() {
-        this.ListAnimais.length;
+       return this.ListAnimais.length;
     }
 
     getAllAnimal() {
-        this.ListAnimais;
+       return this.ListAnimais;
     }
 
     getAnimalPorId(id) {
         return this.ListAnimais.find((animal) => animal.id === id);
+    }
+
+    getAnimalPorTipo(tipo) {
+        return this.ListAnimais.filter((animal) => animal.tipo.toLowerCase() === tipo.toLowerCase());
     }
 
     atualizarAnimal(id, nome, tipo, idade, cor, imagem, vacinado) {
